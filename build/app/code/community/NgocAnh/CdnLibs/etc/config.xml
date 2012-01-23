@@ -99,6 +99,14 @@
                 <version><![CDATA[1.7.1]]></version>
                 <abbreviation><![CDATA[$j]]></abbreviation>
             </jquery_core>
+
+            <jquery_ui>
+                <enable><![CDATA[1]]></enable>
+                <resource><![CDATA[3]]></resource>
+                <minified><![CDATA[1]]></minified>
+                <version><![CDATA[1.8.17]]></version>
+                <version><![CDATA[base]]></version>
+            </jquery_ui>
         </nd_cdn_libs>
     </default>
 </config>
