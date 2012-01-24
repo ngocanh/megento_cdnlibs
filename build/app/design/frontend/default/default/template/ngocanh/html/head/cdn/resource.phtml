@@ -1,0 +1,55 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category  design
+ * @package   default_default
+ * @package   NgocAnh_CdnLibs
+ * @author    Ngoc Anh Doan <ngoc@nhdoan.de>
+ * @copyright 2012 Ngoc Anh Doan
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      https://github.com/ngocanh/ngocanh_mage_cdnlibs
+ */
+
+/**
+ * Template: 'ngocanh/html/head/cdn/resource.phtml':
+ *
+ *  Child block of 'head' to add additional external CSS/JS resources.
+ */
+
+/* @var $this NgocAnh_CdnLibs_Block_Html_Head_Cdn_Resource */
+?>
+
+<?php foreach ($this->getCssItems() as $href => $data): ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $href ?>" media="<?php echo $data['params']['media'] ?>" />
+<?php endforeach; ?>
+
+<?php foreach ($this->getJsItems() as $src => $data): ?>
+<script type="<?php echo $data['params']['type'] ?>" src="<?php echo $src ?>"></script>
+<?php endforeach; ?>
+
+<?php if ($this->isEnabled()): ?>
+<script type="text/javascript" charset="UTF-8">
+// <![CDATA[[
+    if (window.jQuery) {
+        var <?php echo $this->getShortcut() ?> = jQuery.noConflict();
+    }
+// ]]>
+</script>
+<?php endif; ?>
