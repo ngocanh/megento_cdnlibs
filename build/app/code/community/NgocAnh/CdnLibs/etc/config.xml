@@ -40,6 +40,7 @@
                 <class>NgocAnh_CdnLibs_Block</class>
             </nd_cdnlibs>
         </blocks>
+        
         <helpers>
             <nd_cdnlibs>
                 <class>NgocAnh_CdnLibs_Helper</class>
@@ -89,6 +90,18 @@
             </updates>
         </layout>
     </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <NgocAnh_CdnLibs>
+                    <files>
+                        <default>NgocAnh_CdnLibs.csv</default>
+                    </files>
+                </NgocAnh_CdnLibs>
+            </modules>
+        </translate>
+    </adminhtml>
 
     <default>
         <nd_cdn_libs>
