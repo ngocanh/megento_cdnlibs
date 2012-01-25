@@ -150,9 +150,22 @@ class NgocAnh_CdnLibs_Model_System_Config_Cdn_Jquery extends NgocAnh_CdnLibs_Mod
      *
      * @return string|array
      */
-    public function getCoreConfig($key = '')
+    public function getCoreConfig($key = null)
     {
         return $this->getCore($key);
+    }
+
+    /**
+     * Alias for getting jQuery UI config.
+     *
+     * @param string $key Systeml XML field to get value from - empty returns whole
+     *                    config section.
+     *
+     * @return string|array
+     */
+    public function getUiConfig($key = null)
+    {
+        return $this->getUi($key);
     }
 
     /**
@@ -187,19 +200,6 @@ class NgocAnh_CdnLibs_Model_System_Config_Cdn_Jquery extends NgocAnh_CdnLibs_Mod
         }
 
         return $coreUri;
-    }
-
-    /**
-     * Alias for getting jQuery UI config.
-     *
-     * @param string $key Systeml XML field to get value from - empty returns whole
-     *                    config section.
-     *
-     * @return string|array
-     */
-    public function getUiConfig($key = '')
-    {
-        return $this->getUi($key);
     }
 
     /**
