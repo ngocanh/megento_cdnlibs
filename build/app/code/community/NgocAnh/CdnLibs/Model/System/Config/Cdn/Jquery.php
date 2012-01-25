@@ -143,6 +143,19 @@ class NgocAnh_CdnLibs_Model_System_Config_Cdn_Jquery extends NgocAnh_CdnLibs_Mod
     }
 
     /**
+     * Alias for getting jQuery Core config.
+     *
+     * @param string $key Systeml XML field to get value from - empty returns whole
+     *                    config section.
+     *
+     * @return string|array
+     */
+    public function getCoreConfig($key = '')
+    {
+        return $this->getCore($key);
+    }
+
+    /**
      * Generates URI to jQuery core resource, assemble according to set configs
      * in back end.
      *
@@ -174,6 +187,19 @@ class NgocAnh_CdnLibs_Model_System_Config_Cdn_Jquery extends NgocAnh_CdnLibs_Mod
         }
 
         return $coreUri;
+    }
+
+    /**
+     * Alias for getting jQuery UI config.
+     *
+     * @param string $key Systeml XML field to get value from - empty returns whole
+     *                    config section.
+     *
+     * @return string|array
+     */
+    public function getUiConfig($key = '')
+    {
+        return $this->getUi($key);
     }
 
     /**
