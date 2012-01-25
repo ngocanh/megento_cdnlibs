@@ -1,4 +1,5 @@
-<?php
+<?xml version="1.0"?>
+<!--
 /**
  * Magento
  *
@@ -18,38 +19,28 @@
  * versions in the future. If you wish to customize Magento for your
  * needs please refer to http://www.magentocommerce.com for more information.
  *
- * @category  design
- * @package   default_default
+ * @category  NgocAnh
  * @package   NgocAnh_CdnLibs
  * @author    Ngoc Anh Doan <ngoc@nhdoan.de>
  * @copyright 2012 Ngoc Anh Doan
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      https://github.com/ngocanh/ngocanh_mage_cdnlibs
  */
-
-/**
- * Template: 'ngocanh/html/head/cdn/resource.phtml':
- *
- *  Child block of 'head' to add additional external CSS/JS resources.
- */
-
-/* @var $this NgocAnh_CdnLibs_Block_Html_Head_Cdn_Resource */
-?>
-
-<?php foreach ($this->getCssItems() as $href => $data): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $href ?>" media="<?php echo $data['params']['media'] ?>" />
-<?php endforeach; ?>
-
-<?php foreach ($this->getJsItems() as $src => $data): ?>
-<script type="<?php echo $data['params']['type'] ?>" src="<?php echo $src ?>"></script>
-<?php endforeach; ?>
-
-<?php if ($this->isjQueryCoreEnabled()): ?>
-<script type="text/javascript" charset="UTF-8">
-// <![CDATA[[
-    if (window.jQuery) {
-        var <?php echo $this->getShortcut() ?> = jQuery.noConflict();
-    }
-// ]]>
-</script>
-<?php endif; ?>
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="nd_cdnlibs/html_head_cdn_resource" name="cdn.resource" as="cdnResource">
+                <!-- example usage: -->
+                <!--
+                <action method="addJs">
+                    <uri><![CDATA[code.jquery.com/jquery-1.7.1.min.js]]></uri>
+                    <params>
+                        <content><![CDATA[var $j = jQuery.noConflict();]]></content>
+                    </params>
+                </action>
+                -->
+            </block>
+        </reference>
+    </default>
+</layout>

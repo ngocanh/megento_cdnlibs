@@ -147,7 +147,7 @@
                         </custom_resource>
                         <version translate="label,comment">
                             <label>jQuery UI Version</label>
-                            <comment><![CDATA[Specify file and version with url-path:<br /><span class="jquery-resource"></span>]]></comment>
+                            <comment><![CDATA[Specify file and version with URL-path:<br /><span class="jquery-resource"></span>]]></comment>
                             <frontend_type>text</frontend_type>
                             <validation>required</validation>
                             <depends><enable>1</enable></depends>
